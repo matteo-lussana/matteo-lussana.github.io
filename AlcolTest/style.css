@@ -1,0 +1,76 @@
+.flex-parent-element {
+    display: flex;
+    width: 100%;
+  }
+  
+  .flex-child-element {
+    flex: 1;
+    border: 2px solid blueviolet;
+    margin: 10px;
+  }
+  
+  .flex-child-element:first-child {
+    margin-right: 20px;
+  }
+
+.flex-parent-alcol-value {
+    display: flex;
+}
+    .alcool-label {
+        margin-top: 20px;
+    }
+    .alcool {
+        vertical-align: middle;
+        font-size: 250%;
+    }
+
+.input-table {
+    text-align: center;
+    align-items: center;
+}
+
+body {
+    margin: 50px;
+  }
+
+.flood{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+.image{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+  .stickman{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stickman:before{
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(107, 14, 30);
+    left:50%;
+    transform: translateX(-50%);
+    border-radius: 40%;
+    animation: fill 7s ease-in-out infinite;
+  }
+
+  @keyframes fill{
+    from{
+        top: 250px;
+        transform: translate(-50%) rotate(0deg);
+    }
+    to{
+        top: -50px;
+        transform: translate(-50%) rotate(360deg);
+    }
+  }

@@ -1,23 +1,44 @@
 function addDrink(){
     table = document.querySelector(".input-table");
     line = document.createElement('tr');
-    remove_btn = document.createElement('button');
+    
+    //drink/percentage input
     drink = document.createElement('input');
     drink.type = "number";
-    drink.className = "input-drink"
+    drink.className = "input-drink";
+    line.appendChild(drink);
+
+    //select volume input
+    volume = document.createElement('select');
+    volume.className = "input-volume";
+    volumes = ["50 ml", "100 ml", "200 ml", "500 ml", "1 l", "2 l"];
+    volumes_v = [50, 100, 200, 500, 1000, 2000];
+    for(var i=0; i<volumes.length; i++){
+        var option = document.createElement('option');
+        option.value = volumes_v[i];
+        option.text = volumes[i];
+        volume.appendChild(option)
+    }
+    line.appendChild(volume)
+
+    //time inpute
     time = document.createElement('input');
     time.type = "time";
-    time.className = "input-time"
-    remove_btn.setAttribute("onClick", "removeDrink()");
-    line.appendChild(drink)
+    time.className = "input-time";
     line.appendChild(time)
-    line.appendChild(remove_btn)
-    table.appendChild(line)
+
+    //remove input row
+    remove_btn = document.createElement('input');
+    remove_btn.type = "button";
+    remove_btn.setAttribute("onClick", "removeDrink()");
+    remove_btn.className = "input-remove";
+    line.appendChild(remove_btn);
+    
+    table.appendChild(line);
 }
 
 function removeDrink(){
     const btn = event.target
-    console.log(btn.parentElement)
     btn.parentNode.parentNode.removeChild(btn.parentNode)
 }
 

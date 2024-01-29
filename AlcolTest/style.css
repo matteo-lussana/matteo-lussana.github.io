@@ -1,76 +1,212 @@
-.flex-parent-element {
-    display: flex;
-    width: 100%;
-  }
-  
-  .flex-child-element {
-    flex: 1;
-    border: 2px solid blueviolet;
-    margin: 10px;
-  }
-  
-  .flex-child-element:first-child {
-    margin-right: 20px;
-  }
-
-.flex-parent-alcol-value {
-    display: flex;
-}
-    .alcool-label {
-        margin-top: 20px;
-    }
-    .alcool {
-        vertical-align: middle;
-        font-size: 250%;
-    }
-
-.input-table {
-    text-align: center;
-    align-items: center;
-}
-
 body {
-    margin: 50px;
+    
+    height: 100vh;
+    width: 90%;
+    margin: 5%;
+    background-color: #242424;
   }
 
 .flood{
     position: relative;
     top: 0;
     left: 0;
+    min-height: 260px;
+    min-width: 130px;
+    width: 20%;
+    height: 20%;
 }
-
 
 .image{
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
     position: absolute;
 }
-  .stickman{
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-  }
+.stickman{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
 
-  .stickman:before{
-    content: "";
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background-color: rgb(107, 14, 30);
-    left:50%;
-    transform: translateX(-50%);
-    border-radius: 40%;
-    animation: fill 7s ease-in-out infinite;
-  }
+.stickman:before{
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background-color: rgb(107, 14, 30);
+  left:50%;
+  transform: translateX(-50%);
+  border-radius: 40%;
+  animation: a0 7s ease-in-out infinite;
+}
 
-  @keyframes fill{
-    from{
-        top: 250px;
-        transform: translate(-50%) rotate(0deg);
-    }
-    to{
-        top: -50px;
-        transform: translate(-50%) rotate(360deg);
-    }
+.results{
+  transform: translateX(50%) translateY(-130%);
+  padding-top: 20%;
+}
+.info{
+  color: aliceblue;
+  font-family: "Gill Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.hour-container{
+  padding-top: 20px;
+}
+.data{
+  font-size: 50px;
+  transform: scale(1, 4);
+}
+.hour{
+  padding-left: 10%;
+}
+
+.input-zone{
+  text-align: center;
+  margin: 10px;
+  vertical-align: top;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: -30%;
+}
+
+.input-table {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 80%;
+}
+
+tr{
+  width: 100%;
+}
+
+.input-drink{
+  width: 70%;
+  margin-bottom: 10px;
+}
+.input-time{
+  width: 10%;
+}
+
+.button{
+  width: 40%;
+  height: 4vh;
+  border-radius: 20px;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+/*animation for liquid*/
+@keyframes a0{
+  from{
+    top: 100%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 100%;
+    transform: translate(-50%) rotate(360deg);
   }
+}
+@keyframes a1{
+  from{
+    top: 90%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 90%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a2{
+  from{
+    top: 80%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 80%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a3{
+  from{
+    top: 70%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 70%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a4{
+  from{
+    top: 60%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 60%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a5{
+  from{
+    top: 50%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 50%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a6{
+  from{
+    top: 40%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 40%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a7{
+  from{
+    top: 30%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 30%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a8{
+  from{
+    top: 20%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 20%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a9{
+  from{
+    top: 10%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 10%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}
+@keyframes a10{
+  from{
+    top: 0%;
+    transform: translate(-50%) rotate(0deg);
+}
+  to{
+    top: 0%;
+    transform: translate(-50%) rotate(360deg);
+  }
+}

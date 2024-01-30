@@ -50,10 +50,10 @@ body {
 }
 .info{
   color: aliceblue;
-  font-family: "Gill Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 5px;
 }
 
 .hour-container{
@@ -64,7 +64,11 @@ body {
   transform: scale(1, 4);
 }
 .hour{
-  padding-left: 10%;
+  padding-left: 15%;
+}
+
+.input-setting{
+  vertical-align: middle;
 }
 
 .input-zone{
@@ -75,7 +79,12 @@ body {
   margin: 0 auto;
   margin-top: -30%;
 }
-
+.label{
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-left: 5%;
+}
 .input-table {
   margin: 0 auto;
   text-align: center;
@@ -103,7 +112,7 @@ tr{
 }
 .input-time{
   height: 100%;
-  width: 20%;
+  width: fit-content;
   margin-left: 5px;
   border-radius: 5px;
 }
@@ -118,7 +127,7 @@ tr{
 .button{
   width: 40%;
   height: 4vh;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 100%;
   font-weight: bold;
 }

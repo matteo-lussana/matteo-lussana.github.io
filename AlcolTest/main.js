@@ -150,9 +150,8 @@ function addDrink(){
 }
 
 function customDrink(){
-    console.log("dio")
     if(event.target.value == -1){
-        var custom = prompt("Please enter the alcool percentage (%)", "");
+        var custom = parseInt((prompt("Please enter the alcool percentage (%)", "")).replace("%",""));
         custom_pos = event.target.children.length-1 //it is the last one
         event.target.children[custom_pos].value = custom
         event.target.children[custom_pos].text = custom + "%"
@@ -188,10 +187,8 @@ function compute(){
         for(var i=0; i<Time.length; i++){
             if(Time[i]<12) Time[i] = Time[i] + 24;
         }
-    console.log(Time)
     //set user weigth
     P = document.querySelector(".label-slider").innerHTML
-    console.log(P)
     //set coiff based on food and sex
     //using bin number [11 = male + w_food, 10 = male + wo_food,
     //                  01 = female + w_food, 00 = female + wo_food]
@@ -208,10 +205,8 @@ function compute(){
         case 3: K = 1.2
             break;
     }
-    console.log(K)
     //compute fix variable
     W = (0.8*0.01)/(P*K)
-    console.log(W)
     alc = 0
     for(var i=0; i<Time.length-1; i++){
         alc = W*Perc[i]*Vol[i];

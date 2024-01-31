@@ -233,7 +233,8 @@ function compute(){
     alc = 0
     for(var i=0; i<Time.length-1; i++){
         alc = W*Perc[i]*Vol[i];
-        alc = alc - 0.12*(Time[i+1]-Time[i])
+        delta_t = Time[i+1]-Time[i];
+        alc = alc - 0.12*(Math.abs(delta_t))
     }
     alc = alc.toFixed(2)
     

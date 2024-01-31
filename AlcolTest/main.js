@@ -92,6 +92,14 @@ function setSlider(){
 function addDrink(){
 
     table = document.querySelector(".input-table");
+
+    if(table.children.length == 0){
+        info_span = document.createElement('span');
+        info_span.innerHTML = "insert all drinks in chronological order"
+        info_span.className = "info-span"
+        table.appendChild(info_span)
+    }
+
     line = document.createElement('tr');
     
     //drink/percentage input
@@ -186,8 +194,9 @@ function compute(){
     Vol = []
     Time = []
 
-    list.forEach(d => {
+    list.slice(1).forEach(d => {
         info = Array.from(d.children);
+        console.log(info)
         Perc.push(info[0].value);
         Vol.push(parseInt(info[1].value));
 
@@ -230,12 +239,12 @@ function compute(){
     
     hours = (alc/0.12)*60
 
-    if(alc<0) {
+    if(alc<=0) {
         alc = 0
         hours = 0
-        changeAnimatio(0)
+        changeAnimation(-1)
     }else{
-        changeAnimatio(alc)
+        changeAnimation(alc)
     }
     document.querySelector(".alc-value").innerHTML = alc;
     document.querySelector(".hour").innerHTML = hours.toFixed(0)
@@ -252,9 +261,11 @@ function checkSetting(){
     }
 }
 
-function changeAnimatio(alcolValue){
+function changeAnimation(alcolValue){
     alcolValue = alcolValue*10;
     alcolValue = Math.round(alcolValue)
     var animation = document.head.appendChild(document.createElement("style"))
-    animation.innerHTML = '.stickman:before{ content: "";position: absolute; width: 400px; height: 400px; background-color: rgb(107, 14, 30); left:50%; transform: translateX(-50%); border-radius: 40%; animation: a'+alcolValue+' 5s infinite; }'
+    if(alcolValue < 0){
+        animation.innerHTML = '.stickman:before{ content: "";position: absolute; width: 400px; height: 400px; background-color: rgb(20, 171, 65); left:50%; transform: translateX(-50%); border-radius: 40%; animation: a'+alcolValue+' 5s infinite; }'
+    }else animation.innerHTML = '.stickman:before{ content: "";position: absolute; width: 400px; height: 400px; background-color: rgb(107, 14, 30); left:50%; transform: translateX(-50%); border-radius: 40%; animation: a'+alcolValue+' 5s infinite; }'
 }

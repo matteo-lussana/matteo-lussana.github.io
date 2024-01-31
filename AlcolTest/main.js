@@ -90,6 +90,7 @@ function setSlider(){
 }
 
 function addDrink(){
+
     table = document.querySelector(".input-table");
     line = document.createElement('tr');
     
@@ -98,7 +99,20 @@ function addDrink(){
     drink.className = "input-drink";
     drink.setAttribute("onchange", "customDrink()")
 
-    //drinks_list = [["gin lemon" , 14],["birra",7]]
+    drinks_list = [
+        ["aperol spritz", 11],
+        ["cammpari spritz", 23],
+        ["gin lemon" , 17],
+        ["birra",6],
+        ["sbagliato", 18],
+        ["gin tonic", 10],
+        ["vodka redbull", 34],
+        ["long island", 35],
+        ["moscow mule", 20],
+        ["mojito", 7],
+        ["caipiroska", 13],
+        ["montenegro", 33],
+        ["negroni", 30]]
 
     for(var i=0; i<drinks_list.length; i++){
         var option = document.createElement('option');
